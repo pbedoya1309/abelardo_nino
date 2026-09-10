@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El plan de Abelardo para El Niño</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+  /* Paleta oficial de Economía para la Pipol (Mapa de colores Pipol), reutilizada
+     de piezas anteriores de la marca:
+     #B3CEFF #0089BE #3ECDFF #06B3FF #099FD3 #4287BA #2F74B2 #333A7D #513185
+     #2D1554 #96295B #BA326D #D12F7D #E54CA0 #FF2A75 #F79AC9 #FFB8B8 #DB2645
+     #E83445 #FF9022 #FF9D33 #FFA300 #F7C148 #FFDE08 #F9DB43 #F3DA4D #FFE76E
+     #E8E37E #FFF2BB #C2CF49 #509579 #4511A8 #917D71 #29606D #EBD3B0 */
+  :root{
+    color-scheme: light;
+    --page-bg:#3a1f66;
+    --page-bg-2:#2d1554;
+    --ink-on-purple:#fdf7ea;
+    --ink-on-purple-muted:#d9c7f2;
+    --brand-ink:#2d1554;
+    --brand-pink:#a81a58;
+    --brand-pink-soft:#fbe1ec;
+    --brand-purple:#4511a8;
+    --brand-purple-soft:#ece3fb;
+    --surface:#ffffff;
+    --text:#131313;
+    --text-muted:#3a3128;
+    --rule:color-mix(in srgb, #917d71 30%, #ffffff 70%);
+    --accent:#0089be;
+    --accent-strong:#04516f;
+    --accent-soft:#dcf0f8;
+    --warn:#9c4600;
+    --warn-soft:#fdead2;
+    --critical:#a30f34;
+    --critical-soft:#fbe1e6;
+    --good:#215c3b;
+    --good-soft:#e0f0e5;
+    /* colores de sección: uno por pestaña, sacados directo del Mapa de colores Pipol */
+    --sec-0:#0089be;   /* Contexto */
+    --sec-0-soft:#e3f3fa;
+    --sec-1:#4511a8;   /* Qué es El Niño */
+    --sec-1-soft:#ece3fb;
+    --sec-2:#0c6b7a;   /* Clima y energía */
+    --sec-2-soft:#dff2f2;
+    --sec-3:#a81a58;   /* El plan de Abelardo */
+    --sec-3-soft:#fbe1ec;
+    --sec-4:#a85200;   /* Cómo me afecta */
+    --sec-4-soft:#fcecd6;
+    --sec-5:#a30f34;   /* Crisis acumulada */
+    --sec-5-soft:#fbe1e6;
+    --sec-6:#2d1554;   /* Conclusiones */
+    --sec-6-soft:#ece3f8;
+    --panel-accent:var(--sec-0);
+    --panel-accent-soft:var(--sec-0-soft);
+    --shadow: 0 1px 2px rgba(20,10,30,.14), 0 12px 28px -14px rgba(20,10,30,.38);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --page-bg:#160c28;
+      --page-bg-2:#0f0819;
+      --ink-on-purple:#fdf7ea;
+      --ink-on-purple-muted:#cdb8ec;
+      --surface:#241a38;
+      --text:#f6efe0;
+      --text-muted:#d9c7a8;
+      --rule:color-mix(in srgb, #d9c7a8 22%, #241a38 78%);
+      --accent:#3ecdff;
+      --accent-strong:#8fe3ff;
+      --accent-soft:color-mix(in srgb, #3ecdff 18%, #241a38 82%);
+      --warn:#ffb238;
+      --warn-soft:color-mix(in srgb, #ffb238 18%, #241a38 82%);
+      --critical:#ff7a8a;
+      --critical-soft:color-mix(in srgb, #ff7a8a 16%, #241a38 84%);
+      --good:#7fd1a4;
+      --good-soft:color-mix(in srgb, #7fd1a4 16%, #241a38 84%);
+      --brand-pink:#ff6fae;
+      --brand-pink-soft:color-mix(in srgb, #ff6fae 16%, #241a38 84%);
+      --brand-purple:#b79bff;
+      --brand-purple-soft:color-mix(in srgb, #b79bff 16%, #241a38 84%);
+      --sec-0:#3ecdff; --sec-0-soft:color-mix(in srgb, #3ecdff 16%, #241a38 84%);
+      --sec-1:#b79bff; --sec-1-soft:color-mix(in srgb, #b79bff 16%, #241a38 84%);
+      --sec-2:#6fd0c7; --sec-2-soft:color-mix(in srgb, #6fd0c7 16%, #241a38 84%);
+      --sec-3:#ff6fae; --sec-3-soft:color-mix(in srgb, #ff6fae 16%, #241a38 84%);
+      --sec-4:#ffb238; --sec-4-soft:color-mix(in srgb, #ffb238 16%, #241a38 84%);
+      --sec-5:#ff7a8a; --sec-5-soft:color-mix(in srgb, #ff7a8a 16%, #241a38 84%);
+      --sec-6:#e9def0; --sec-6-soft:color-mix(in srgb, #e9def0 14%, #241a38 86%);
+      --panel-accent:var(--sec-0);
+      --panel-accent-soft:var(--sec-0-soft);
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 14px 34px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --page-bg:#160c28;
+    --page-bg-2:#0f0819;
+    --ink-on-purple:#fdf7ea;
+    --ink-on-purple-muted:#cdb8ec;
+    --surface:#241a38;
+    --text:#f6efe0;
+    --text-muted:#d9c7a8;
+    --rule:color-mix(in srgb, #d9c7a8 22%, #241a38 78%);
+    --accent:#3ecdff;
+    --accent-strong:#8fe3ff;
+    --accent-soft:color-mix(in srgb, #3ecdff 18%, #241a38 82%);
+    --warn:#ffb238;
+    --warn-soft:color-mix(in srgb, #ffb238 18%, #241a38 82%);
+    --critical:#ff7a8a;
+    --critical-soft:color-mix(in srgb, #ff7a8a 16%, #241a38 84%);
+    --good:#7fd1a4;
+    --good-soft:color-mix(in srgb, #7fd1a4 16%, #241a38 84%);
+    --brand-pink:#ff6fae;
+    --brand-pink-soft:color-mix(in srgb, #ff6fae 16%, #241a38 84%);
+    --brand-purple:#b79bff;
+    --brand-purple-soft:color-mix(in srgb, #b79bff 16%, #241a38 84%);
+    --sec-0:#3ecdff; --sec-0-soft:color-mix(in srgb, #3ecdff 16%, #241a38 84%);
+    --sec-1:#b79bff; --sec-1-soft:color-mix(in srgb, #b79bff 16%, #241a38 84%);
+    --sec-2:#6fd0c7; --sec-2-soft:color-mix(in srgb, #6fd0c7 16%, #241a38 84%);
+    --sec-3:#ff6fae; --sec-3-soft:color-mix(in srgb, #ff6fae 16%, #241a38 84%);
+    --sec-4:#ffb238; --sec-4-soft:color-mix(in srgb, #ffb238 16%, #241a38 84%);
+    --sec-5:#ff7a8a; --sec-5-soft:color-mix(in srgb, #ff7a8a 16%, #241a38 84%);
+    --sec-6:#e9def0; --sec-6-soft:color-mix(in srgb, #e9def0 14%, #241a38 86%);
+    --panel-accent:var(--sec-0);
+    --panel-accent-soft:var(--sec-0-soft);
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 14px 34px -14px rgba(0,0,0,.55);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+  }
+  body{
+    margin:0;
+    background:linear-gradient(180deg, var(--page-bg) 0%, var(--page-bg-2) 100%);
+    color:var(--text);
+    font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:64px;
+  }
+  a{color:var(--accent-strong);}
+  a:focus-visible, button:focus-visible, summary:focus-visible, .tab:focus-visible{
+    outline:2px solid var(--sec-3);
+    outline-offset:3px;
+  }
+  img{max-width:100%;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px;}
+  .num{font-variant-numeric:tabular-nums;}
+  h1,h2,h3{font-family:"Baloo 2",ui-rounded,sans-serif;font-weight:700;text-wrap:balance;}
+  b,strong{color:inherit;}
+
+  /* ---------- header (sobre morado) ---------- */
+  header.top{padding:30px 0 18px;}
+  .brand-row{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+  .brand-chip{
+    flex:none;width:58px;height:58px;border-radius:14px;background:var(--surface);
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
+    padding:5px;border:1.5px solid rgba(255,255,255,.25);
+  }
+  .brand-chip img{width:100%;height:100%;object-fit:contain;display:block;}
+  .brand-name{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:1.08rem;color:var(--ink-on-purple);}
+  .eyebrow{
+    font-family:"Nunito",sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;
+    color:#ffd23f;font-weight:800;margin:0 0 10px;
+  }
+  h1.title{font-size:clamp(1.9rem,5vw,2.75rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.01em;color:var(--ink-on-purple);}
+  h1.title em{font-style:normal;color:#ff8fc0;}
+  .byline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.87rem;color:var(--ink-on-purple-muted);margin:0 0 18px;}
+  .byline strong{color:var(--ink-on-purple);}
+  .byline .dot{width:4px;height:4px;border-radius:50%;background:var(--ink-on-purple-muted);}
+  .dek{font-size:1.06rem;color:var(--ink-on-purple);max-width:64ch;margin:0;}
+  .dek strong{color:#ffd23f;}
+
+  /* ---------- banner: cómo usar ---------- */
+  .howto{
+    margin:22px 0 0;background:#ffd23f;
+    border-radius:14px;padding:13px 18px;display:flex;gap:10px;align-items:center;
+    box-shadow:var(--shadow);
+  }
+  .howto .ico{flex:none;font-size:1.2rem;line-height:1;}
+  .howto p{margin:0;font-size:.94rem;color:#2b1a00;font-weight:700;}
+
+  /* ---------- tabs ---------- */
+  .tabbar-outer{
+    position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--page-bg) 88%, transparent);
+    backdrop-filter:blur(10px);margin-top:24px;padding-top:4px;border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .tabbar{
+    max-width:880px;margin:0 auto;display:flex;gap:6px;overflow-x:auto;
+    padding:10px 20px;scrollbar-width:thin;
+  }
+  .tab-radio{position:absolute;opacity:0;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+  .tab{
+    flex:none;font-family:"Baloo 2",sans-serif;font-weight:700;font-size:.86rem;
+    color:#fff;background:var(--tab-color, var(--accent-strong));border:1.5px solid var(--tab-color, var(--accent-strong));
+    border-radius:999px;padding:8px 15px;cursor:pointer;white-space:nowrap;
+    opacity:.72;display:inline-block;user-select:none;
+    transition:opacity .15s ease, filter .15s ease, box-shadow .15s ease;
+  }
+  .tab:hover{opacity:1;filter:brightness(1.1);}
+  .tab-radio:focus-visible + label.tab,
+  .tab-radio:checked + label.tab{
+    opacity:1;
+    outline:2px solid rgba(255,255,255,.9);outline-offset:2px;
+    box-shadow:var(--shadow);
+  }
+  .tab .n{opacity:.8;margin-right:5px;}
+
+  .panels{padding-top:22px;}
+  .panel{display:none;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+  #r-contexto:checked ~ .panels #p-contexto,
+  #r-nino:checked ~ .panels #p-nino,
+  #r-energia:checked ~ .panels #p-energia,
+  #r-plan:checked ~ .panels #p-plan,
+  #r-afecta:checked ~ .panels #p-afecta,
+  #r-crisis:checked ~ .panels #p-crisis,
+  #r-cierre:checked ~ .panels #p-cierre{
+    display:block;animation:fade .35s ease;
+  }
+  #p-contexto{--panel-accent:var(--sec-0);--panel-accent-soft:var(--sec-0-soft);}
+  #p-nino{--panel-accent:var(--sec-1);--panel-accent-soft:var(--sec-1-soft);}
+  #p-energia{--panel-accent:var(--sec-2);--panel-accent-soft:var(--sec-2-soft);}
+  #p-plan{--panel-accent:var(--sec-3);--panel-accent-soft:var(--sec-3-soft);}
+  #p-afecta{--panel-accent:var(--sec-4);--panel-accent-soft:var(--sec-4-soft);}
+  #p-crisis{--panel-accent:var(--sec-5);--panel-accent-soft:var(--sec-5-soft);}
+  #p-cierre{--panel-accent:var(--sec-6);--panel-accent-soft:var(--sec-6-soft);}
+
+  /* cada pestaña es un bloque de color propio y relleno, sentado sobre el fondo morado */
+  .panel-sheet{
+    background:var(--panel-accent);
+    color:#fff;
+    border-radius:26px;
+    padding:28px 24px 32px;
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:560px){ .panel-sheet{padding:22px 16px 26px;border-radius:20px;} }
+
+  .panel h2.htitle{
+    font-size:1.6rem;margin:0 0 6px;color:#fff;
+    display:flex;align-items:center;gap:10px;
+  }
+  .panel h2.htitle::before{
+    content:"";width:10px;height:32px;border-radius:4px;background:rgba(255,255,255,.85);flex:none;
+  }
+  .panel p.lede{color:rgba(255,255,255,.92);font-size:1rem;max-width:64ch;margin:0 0 22px;font-weight:600;}
+
+  section.block{margin:0 0 28px;}
+  section.block:last-child{margin-bottom:0;}
+  h3.stitle{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:1.16rem;margin:0 0 10px;color:#fff;}
+  .card h3.stitle, details.acc h3.stitle{color:var(--panel-accent);}
+
+  .card{background:var(--surface);color:var(--text);border:1px solid var(--rule);border-left:4px solid var(--panel-accent);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);}
+  .card + .card{margin-top:14px;}
+  p{margin:0 0 12px;}
+  p:last-child{margin-bottom:0;}
+  .subhead{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:.96rem;color:var(--panel-accent);margin:14px 0 6px;}
+  .subhead:first-child{margin-top:0;}
+
+  .note{
+    display:flex;gap:10px;align-items:flex-start;background:var(--warn-soft);color:var(--text);
+    border:1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+    border-radius:10px;padding:12px 14px;font-size:.9rem;margin:14px 0;
+  }
+  .note .ico{flex:none;}
+  .note strong{color:var(--warn);}
+  .note.good{background:var(--good-soft);border-color:color-mix(in srgb, var(--good) 40%, transparent);}
+  .note.good strong{color:var(--good);}
+  .note.crit{background:var(--critical-soft);border-color:color-mix(in srgb, var(--critical) 40%, transparent);}
+  .note.crit strong{color:var(--critical);}
+
+  /* chip pa' resaltar cifras clave dentro de un párrafo, sin usar negrilla */
+  .hl{
+    display:inline-block;background:color-mix(in srgb, var(--panel-accent) 14%, transparent);
+    color:var(--panel-accent);font-weight:800;border-radius:6px;padding:0 7px;white-space:nowrap;
+  }
+
+  /* ---------- stat tiles ---------- */
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:16px 0;align-items:start;}
+  .stat{background:var(--surface);color:var(--text);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;}
+  .stat .v{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:2.15rem;color:var(--accent-strong);line-height:1;}
+  .stat .v.warn{color:var(--warn);}
+  .stat .v.crit{color:var(--critical);}
+  .stat .v.good{color:var(--good);}
+  .stat .l{font-size:.85rem;color:var(--text-muted);margin-top:8px;line-height:1.4;font-weight:600;}
+
+  details.stat{cursor:pointer;padding:0;overflow:hidden;}
+  details.stat summary{list-style:none;padding:16px 18px;}
+  details.stat summary::-webkit-details-marker{display:none;}
+  details.stat summary .hint{display:block;margin-top:8px;font-size:.72rem;color:var(--accent-strong);font-weight:800;text-transform:uppercase;letter-spacing:.04em;}
+  details.stat .def{padding:0 18px 16px;font-size:.87rem;color:var(--text-muted);border-top:1px dashed var(--rule);margin-top:2px;padding-top:12px;}
+  details.stat .def strong{color:var(--text);}
+
+  /* ---------- media embeds ---------- */
+  .media-card{
+    display:flex;gap:12px;align-items:center;background:var(--surface);
+    border:1px solid var(--rule);border-radius:12px;padding:12px 14px;margin:14px 0;
+    text-decoration:none;color:var(--text)!important;
+  }
+  .media-card *{color:inherit;}
+  .media-card:hover{border-color:var(--panel-accent);}
+  .media-card .play{
+    flex:none;width:38px;height:38px;border-radius:50%;background:var(--panel-accent);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .media-card .play svg{width:14px;height:14px;fill:#fff;margin-left:2px;}
+  .media-card .mt{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:.92rem;color:var(--text);}
+  .media-card .ms{font-size:.78rem;color:var(--text-muted);}
+
+  .video-embed{margin:16px 0;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:#000;}
+  .video-embed .ratio{position:relative;width:100%;padding-top:56.25%;}
+  .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .video-cap{font-size:.78rem;color:var(--text-muted);margin-top:8px;font-weight:600;}
+
+  /* ---------- medidas contexto (clicables) ---------- */
+  .medida-list{counter-reset:medida;}
+  .medida{counter-increment:medida;position:relative;padding-left:44px;margin:0 0 16px;}
+  .medida:last-child{margin-bottom:0;}
+  .medida::before{
+    content:counter(medida);position:absolute;left:0;top:0;width:32px;height:32px;
+    border-radius:9px;background:var(--panel-accent);color:#fff;
+    font-family:"Baloo 2",sans-serif;font-weight:800;display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);
+  }
+  .medida h4{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:1.02rem;margin:2px 0 4px;color:#fff;}
+  .medida p{color:rgba(255,255,255,.88);}
+  a.medida-link{display:block;text-decoration:none;color:inherit;border-radius:10px;padding:6px 10px;margin:0 -10px;transition:background .15s ease;}
+  a.medida-link:hover{background:rgba(255,255,255,.14);}
+  a.medida-link:hover h4{color:#ffd23f;}
+  .medida .go{font-size:.76rem;color:#ffd23f;font-weight:800;text-transform:uppercase;letter-spacing:.03em;}
+  .medida::before{background:#fff;color:var(--panel-accent)!important;}
+
+  /* ---------- table (grupos ahorro) ---------- */
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:12px;background:var(--surface);color:var(--text);}
+  table.grid{width:100%;min-width:480px;border-collapse:collapse;font-size:.87rem;}
+  table.grid th, table.grid td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top;}
+  table.grid thead th{
+    font-family:"Nunito",sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--text-muted);background:color-mix(in srgb, var(--panel-accent) 10%, var(--surface) 90%);
+  }
+  table.grid tbody tr:last-child td{border-bottom:none;}
+  table.grid td.tag-cell strong{display:block;font-family:"Baloo 2",sans-serif;color:var(--panel-accent);}
+
+  /* ---------- accordions ---------- */
+  details.acc{
+    background:var(--surface);color:var(--text);border:1px solid var(--rule);border-radius:14px;
+    margin:0 0 12px;overflow:hidden;box-shadow:var(--shadow);
+  }
+  details.acc:last-child{margin-bottom:0;}
+  details.acc[open]{border-color:color-mix(in srgb, var(--panel-accent) 40%, var(--rule));}
+  details.acc summary{
+    list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;gap:12px;
+    font-family:"Baloo 2",sans-serif;font-weight:700;font-size:1.03rem;
+  }
+  details.acc summary::-webkit-details-marker{display:none;}
+  details.acc summary .chev{
+    margin-left:auto;flex:none;width:22px;height:22px;border-radius:50%;background:var(--panel-accent-soft);
+    display:flex;align-items:center;justify-content:center;transition:transform .2s ease;font-size:.8rem;color:var(--panel-accent);
+  }
+  details.acc[open] summary .chev{transform:rotate(180deg);}
+  details.acc summary .sev{
+    flex:none;width:9px;height:9px;border-radius:50%;
+  }
+  details.acc .acc-body{padding:0 18px 20px;font-size:.95rem;}
+  details.acc .acc-body .lede{color:var(--text-muted);margin-bottom:14px;font-weight:600;}
+
+  details.acc.mini summary{font-size:.94rem;padding:13px 16px;}
+  details.acc.mini .acc-body{padding:0 16px 16px;font-size:.9rem;}
+
+  /* ---------- charts ---------- */
+  .chart-card{background:var(--surface);color:var(--text);border:1px solid var(--rule);border-radius:14px;padding:18px 20px 12px;box-shadow:var(--shadow);}
+  .chart-card.small{max-width:380px;margin:14px auto 0;}
+  .chart-card h4{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:.95rem;margin:0 0 2px;color:var(--panel-accent);}
+  .chart-card .src{font-size:.74rem;color:var(--text-muted);margin-top:8px;}
+  svg.chart{width:100%;height:auto;display:block;}
+  svg.chart text{font-family:"Nunito",sans-serif;fill:var(--text);}
+  svg.chart .muted{fill:var(--text-muted);font-size:11px;}
+  svg.chart .val{font-weight:800;font-family:"Baloo 2",sans-serif;}
+  svg.chart .axisline{stroke:var(--rule);stroke-width:1;}
+
+  /* ---------- sources / footer (sobre morado) ---------- */
+  .sources{margin-top:40px;}
+  .sources h3.stitle{color:#ffd23f;}
+  .sources ol{padding-left:20px;margin:0;font-size:.88rem;color:var(--ink-on-purple-muted);}
+  .sources li{margin-bottom:9px;}
+  .sources a{color:var(--ink-on-purple);text-decoration-color:rgba(255,255,255,.35);}
+  .sources a:hover{color:#ffd23f;}
+
+  footer.colophon{
+    margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);
+    font-size:.8rem;color:var(--ink-on-purple-muted);
+  }
+
+  @media (max-width:560px){
+    body{font-size:15px;padding-bottom:40px;}
+    .wrap{padding:0 14px;}
+    header.top{padding:20px 0 14px;}
+    .brand-row{gap:10px;margin-bottom:14px;}
+    .brand-chip{width:44px;height:44px;border-radius:11px;}
+    .brand-name{font-size:.94rem;}
+    .eyebrow{font-size:.7rem;letter-spacing:.1em;margin-bottom:6px;}
+    h1.title{margin-bottom:10px;}
+    .byline{font-size:.8rem;margin-bottom:12px;row-gap:4px;}
+    .dek{font-size:.96rem;}
+    .howto{margin-top:16px;padding:10px 14px;border-radius:12px;}
+    .howto p{font-size:.86rem;}
+
+    .tabbar-outer{margin-top:16px;}
+    .tabbar{padding:8px 14px;gap:5px;}
+    .tab{font-size:.78rem;padding:7px 12px;}
+
+    .panels{padding-top:16px;}
+    .panel h2.htitle{font-size:1.3rem;}
+    .panel h2.htitle::before{width:8px;height:24px;}
+    .panel p.lede{font-size:.92rem;margin-bottom:16px;}
+    section.block{margin-bottom:20px;}
+    h3.stitle{font-size:1.02rem;}
+    .card{padding:14px 15px;}
+
+    .stat-grid{grid-template-columns:1fr 1fr;gap:9px;}
+    .stat, details.stat summary{padding:12px 13px;}
+    .stat .v{font-size:1.7rem;}
+    .stat .l{font-size:.78rem;}
+
+    .medida{padding-left:0;}
+    .medida::before{position:static;display:inline-flex;margin-bottom:8px;}
+
+    .chart-card{padding:14px 14px 10px;}
+    .chart-card.small{max-width:100%;}
+    .media-card{padding:12px 14px;}
+
+    .tbl-wrap table{font-size:.84rem;}
+
+    details.acc summary{padding:14px 15px;}
+    details.acc .acc-body{padding:0 15px 16px;font-size:.9rem;}
+
+    .sources{font-size:.84rem;}
+    footer.colophon{margin-top:24px;padding-top:14px;font-size:.76rem;}
+  }
+  @media (max-width:380px){
+    .stat-grid{grid-template-columns:1fr;}
+  }
+</style>
+
+
+</head>
+<body>
+<div class="wrap">
+  <input type="radio" name="section" id="r-contexto" class="tab-radio" checked>
+  <input type="radio" name="section" id="r-nino" class="tab-radio">
+  <input type="radio" name="section" id="r-energia" class="tab-radio">
+  <input type="radio" name="section" id="r-plan" class="tab-radio">
+  <input type="radio" name="section" id="r-afecta" class="tab-radio">
+  <input type="radio" name="section" id="r-crisis" class="tab-radio">
+  <input type="radio" name="section" id="r-cierre" class="tab-radio">
+  <header class="top">
+    <div class="brand-row">
+      <span class="brand-chip" aria-hidden="true"><img src="data:image/png;base64,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" alt=""></span>
+      <div class="brand-name">Economía para la Pipol</div>
+    </div>
+    <p class="eyebrow">Energía · Fenómeno de El Niño</p>
+    <h1 class="title">El plan de <em>Abelardo</em> para manejar el Fenómeno de El Niño</h1>
+    <div class="byline">
+      <strong>Paula Bedoya</strong><span class="dot"></span>
+      <span>10 de septiembre de 2026</span><span class="dot"></span>
+      <span>Lectura en bloques · 8 min</span>
+    </div>
+    <p class="dek">El gobierno está con los pelos de punta: ya empezó el Fenómeno del Niño, es decir, va a hacer más calor, va a llover menos y lo paila es que la mayoría de la luz del país se genera con agua. <strong>Le contamos qué está pasando, qué propone el Gobierno y por qué el arreglo no es pa' siempre.</strong></p>
+
+    <div class="howto">
+      <span class="ico">👉</span>
+      <p>Para leer más, haga clic en cada pestaña.</p>
+    </div>
+  </header>
+
+  <div class="tabbar-outer">
+    <nav class="tabbar" role="tablist" aria-label="Secciones">
+      <label class="tab" role="tab" for="r-contexto" style="--tab-color:var(--sec-0)"><span class="n">00</span>Contexto</label>
+      <label class="tab" role="tab" for="r-nino" style="--tab-color:var(--sec-1)"><span class="n">01</span>¿Qué es El Niño?</label>
+      <label class="tab" role="tab" for="r-energia" style="--tab-color:var(--sec-2)"><span class="n">02</span>Clima y energía</label>
+      <label class="tab" role="tab" for="r-plan" style="--tab-color:var(--sec-3)"><span class="n">03</span>El plan de Abelardo</label>
+      <label class="tab" role="tab" for="r-afecta" style="--tab-color:var(--sec-4)"><span class="n">04</span>¿Cómo me afecta?</label>
+      <label class="tab" role="tab" for="r-crisis" style="--tab-color:var(--sec-5)"><span class="n">05</span>Crisis acumulada</label>
+      <label class="tab" role="tab" for="r-cierre" style="--tab-color:var(--sec-6)"><span class="n">06</span>Conclusiones</label>
+    </nav>
+  </div>
+
+  <div class="panels">
+
+    <!-- ============ 00 CONTEXTO ============ -->
+    <section class="panel is-active" id="p-contexto"><div class="panel-sheet">
+      <h2 class="htitle">El gobierno está con los pelos de punta</h2>
+      <p class="lede">Un repaso rápido de por qué este Fenómeno de El Niño tiene a todo el sector eléctrico en alerta.</p>
+
+      <section class="block card">
+        <p>En el país ya comenzó el Fenómeno de El Niño, un cambio en el clima que trae más calor y menos lluvia. Esa es una combinación explosiva porque en Colombia la mayoría de la energía se genera con agua.</p>
+        <p>Cuando hay sequía, hay menos agua para generar luz. Y lo denso es que, al mismo tiempo, se consume más energía, porque quién sobrevive a este calor sin prender el ventilador o el aire acondicionado.</p>
+        <div class="note crit">
+          <span class="ico">⚠️</span>
+          <p><strong>Ojo:</strong> la falta de energía no es solo por la sequía. Es un problema de hace rato: viene desde los gobiernos Santos y Duque, pero en los últimos 4 años se puso más crítico. Se agudizó el faltante de gas, se acumularon deudas en la Costa con Air-e, se atrasaron los subsidios a los hogares y no entró suficiente energía en firme (esa que está disponible 24/7).</p>
+        </div>
+        <p>Súmele que hoy el país no tiene todo el gas que necesitan las termoeléctricas pa' funcionar, y que el Gobierno le debe plata a varias empresas del sector, lo que les complica operar bien.</p>
+      </section>
+
+      <section class="block">
+        <h3 class="stitle">Las 4 medidas que anunció el Gobierno</h3>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.85);margin:-4px 0 14px;font-weight:600">Haga clic en cualquiera pa' saltar directo a la pestaña <strong style="color:#ffd23f">"El plan de Abelardo"</strong> y ver el detalle.</p>
+        <div class="medida-list">
+          <a class="medida-link" href="#p-plan" data-target="acc-medida-1">
+            <div class="medida"><h4>Descuentos si ahorra, cobro extra si se pasa</h4><p>A quien ahorre luz le dan descuentos; a quien gaste de más, le cobran más. <span class="go">Ver el detalle →</span></p></div>
+          </a>
+          <a class="medida-link" href="#p-plan" data-target="acc-medida-2">
+            <div class="medida"><h4>$1,5 billones para las empresas con deudas</h4><p>Pa' que puedan seguir funcionando durante las sequías. <span class="go">Ver el detalle →</span></p></div>
+          </a>
+          <a class="medida-link" href="#p-plan" data-target="acc-medida-3">
+            <div class="medida"><h4>Encender las termoeléctricas</h4><p>Las plantas que funcionan con gas o diésel generan energía desde ya. <span class="go">Ver el detalle →</span></p></div>
+          </a>
+          <a class="medida-link" href="#p-plan" data-target="acc-medida-4">
+            <div class="medida"><h4>Proyecto de ley urgente en el Congreso</h4><p>Pa' recoger $1,2 billones y que el país no se apague. <span class="go">Ver el detalle →</span></p></div>
+          </a>
+        </div>
+      </section>
+    </div></section>
+
+    <!-- ============ 01 QUÉ ES EL NIÑO ============ -->
+    <section class="panel" id="p-nino"><div class="panel-sheet">
+      <h2 class="htitle">¿Qué es el Fenómeno de El Niño?</h2>
+      <p class="lede">Para nuestro podcast hablamos con Sandra Vilardy, doctora en Ecología y profesora de la Universidad de los Andes.</p>
+
+      <section class="block card">
+        <p>El Niño es una <strong>alteración regional del clima</strong>. Pasa porque las aguas del océano Pacífico se calientan por encima de lo normal, y eso se sincroniza con cambios en la atmósfera.</p>
+        <p>Los impactos dependen de dónde esté uno. De la línea del Ecuador hacia el norte (como Colombia), llueve menos y hay sequías. En el hemisferio sur, en cambio, suele llover más.</p>
+        <div class="note">
+          <span class="ico">☝️</span>
+          <p><strong>El Niño no es lo mismo que el Cambio Climático.</strong> El calentamiento del océano Pacífico es un fenómeno natural: antes se presentaba cada 15 años, pero esa frecuencia se ha ido acelerando. El Cambio Climático sí hace que sea más fuerte, porque el aumento de temperatura de El Niño pasa en un planeta que de por sí ya está más caliente.</p>
+        </div>
+        <p>Como los efectos son cada vez más fuertes y más seguidos, los ecosistemas no alcanzan a recuperarse entre uno y otro.</p>
+      </section>
+
+      <section class="block">
+        <h3 class="stitle">Cada vez más seguido</h3>
+        <div class="chart-card small">
+          <h4>Tiempo entre eventos fuertes de El Niño</h4>
+          <p class="src" style="margin:0 0 6px">De 15 años, a 7,5, a menos de 3</p>
+          <svg class="chart" viewBox="0 0 300 220" role="img" aria-label="Gráfico de barras: tiempo entre eventos de El Niño. Antes de 2015, cerca de 15 años. Entre 2015-16 y 2023-24, 7,5 años. Entre 2023-24 y 2026-27, cerca de 2,5 años.">
+            <line class="axisline" x1="14" y1="180" x2="286" y2="180"/>
+            <rect x="26" y="20" width="62" height="160" rx="6" fill="#0089be"/>
+            <text x="57" y="13" text-anchor="middle" class="val" font-size="13" fill="#0089be">~15 años</text>
+            <text x="57" y="196" text-anchor="middle" class="muted" font-size="9.5">Siglo XX</text>
+
+            <rect x="119" y="100" width="62" height="80" rx="6" fill="#a85200"/>
+            <text x="150" y="93" text-anchor="middle" class="val" font-size="13" fill="#a85200">7,5 años</text>
+            <text x="150" y="196" text-anchor="middle" class="muted" font-size="9">
+              <tspan x="150">2015-16 →</tspan>
+              <tspan x="150" dy="11">2023-24</tspan>
+            </text>
+
+            <rect x="212" y="153" width="62" height="27" rx="6" fill="#a30f34"/>
+            <text x="243" y="146" text-anchor="middle" class="val" font-size="13" fill="#a30f34">~2,5 años</text>
+            <text x="243" y="196" text-anchor="middle" class="muted" font-size="9">
+              <tspan x="243">2023-24 →</tspan>
+              <tspan x="243" dy="11">2026-27*</tspan>
+            </text>
+          </svg>
+          <p class="src">*Hay 90% de probabilidad de Niño en 2026-2027, según el IDEAM y el MinAmbiente. Fuente: ANIF, con base en ENSO Forecast – Columbia Climate School.</p>
+        </div>
+      </section>
+
+      <section class="block card">
+        <h3 class="stitle">¿Cómo le va a Colombia?</h3>
+        <p>Como el país está dividido por el Ecuador, los efectos pueden ser muy diferentes entre regiones: en el norte (Caribe, zonas más pobladas) puede haber sequía y calor, mientras que en la Amazonía puede llover más.</p>
+        <p>Ya varias entidades anunciaron que este Niño se podría adelantar. El IDEAM y el MinAmbiente confirmaron un 82% de probabilidad entre mayo y julio, y desde septiembre esa probabilidad subió al 90% para la mayoría del país. En ciudades como Valledupar, Santa Marta, Quibdó, Medellín, Bogotá y San Andrés ya se registraron temperaturas más altas de lo normal.</p>
+        <div class="note crit">
+          <span class="ico">🌡️</span>
+          <p>Además, se está hablando de un <strong>SuperNiño</strong>: uno que dure mucho más de lo habitual y con efectos más fuertes. Los datos del Pacífico muestran anomalías de temperatura de hasta 4°C o más, y los modelos climáticos anticipan el Niño más fuerte de los últimos 30 años con una duración promedio de 18 meses.</p>
+        </div>
+        <p class="subhead">Escuche el podcast completo</p>
+        <a class="media-card" href="https://www.youtube.com/watch?v=hzyuwH3w2GE&list=PLauMF8VwODmJrG-r-Wnc7R16hh5rljr0_&index=14" target="_blank" rel="noopener">
+          <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+          <span><span class="mt" style="display:block">Mire el episodio completo con Sandra Vilardy</span><span class="ms">YouTube · Economía para la Pipol</span></span>
+        </a>
+      </section>
+    </div></section>
+
+    <!-- ============ 02 CLIMA Y ENERGÍA ============ -->
+    <section class="panel" id="p-energia"><div class="panel-sheet">
+      <h2 class="htitle">¿Qué tiene que ver el clima con la energía?</h2>
+      <p class="lede">Gremios como ANDEG (generadoras de energía del país) ya mencionan que podríamos tener un apagón a nivel nacional. Haga clic en cada dato pa' entender los términos.</p>
+
+      <section class="block">
+        <div class="stat-grid">
+          <details class="stat">
+            <summary><div class="v">+60%</div><div class="l">de la luz del país se genera con hidroeléctricas<span class="hint">¿Qué es esto? ▾</span></div></summary>
+            <div class="def"><strong>Una hidroeléctrica</strong> es una planta que genera electricidad aprovechando la fuerza del agua. La represa embalsa el agua de un río, la deja caer con fuerza sobre unas turbinas, y ese movimiento se convierte en electricidad. Es la fuente más grande de energía del país porque Colombia tiene muchos ríos y montañas, pero por eso mismo depende tanto de que llueva.</div>
+          </details>
+          <details class="stat">
+            <summary><div class="v warn">21%</div><div class="l">del gas que usa Colombia hoy es importado<span class="hint">¿Por qué importa el gas? ▾</span></div></summary>
+            <div class="def">Cuando las hidroeléctricas no dan abasto (por sequía), el país recurre a las <strong>termoeléctricas</strong>, que generan energía quemando gas natural o carbón. El gas es clave porque es más rápido de despachar y más limpio que el carbón o el diésel. El problema es que desde diciembre de 2024 Colombia no produce suficiente gas propio, así que toca traer una parte de afuera: eso sale más caro y depende de que lleguen los barcos a tiempo.</div>
+          </details>
+          <details class="stat">
+            <summary><div class="v crit">83,2%</div><div class="l">nivel de los embalses al 3 de septiembre de 2026<span class="hint">¿Qué es el umbral de alerta? ▾</span></div></summary>
+            <div class="def">Los embalses o represas tienen una cantidad mínima (senda) de agua que la CREG calcula que deberían tener en cada época del año pa' llegar tranquilos a fin de año y sin apagones. Cuando el nivel real cae por debajo de esa cantidad, se dice que está bajo el <strong>umbral técnico de alerta</strong>: una señal de que hay que empezar a cuidar el agua y prender más termoeléctricas, antes de que el riesgo de apagón sea alto.</div>
+          </details>
+        </div>
+
+        <p>Ese 83,2% es un promedio nacional, y por eso puede esconder problemas: no todos los embalses del país están igual de llenos.</p>
+        <div class="chart-card" style="margin:14px auto">
+          <h4>Volumen útil por embalse (%)</h4>
+          <svg class="chart" viewBox="0 0 320 372" role="img" aria-label="Gráfico de barras horizontales con los 13 embalses monitoreados: Guavio 96,2%, Esmeralda 95,9%, Muña 90,9%, Chuza 85,6%, Peñol 85,4%, El Quimbo 79,2%, Ituango 70,3%, Urrá 56,7%, Prado 47,5%, Porce III 45%, Punchiná 35%, Porce II 31,5% y Troneras 10,7%. El promedio nacional es 78%, y tres embalses (Punchiná, Porce II y Troneras) ya están por debajo del umbral crítico del 40%.">
+            <rect x="130" y="4" width="90" height="13" rx="6" fill="var(--surface)"/>
+            <text x="175" y="13" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0c6b7a">umbral crítico 40%</text>
+            <line x1="142" y1="20" x2="142" y2="326" stroke="#0c6b7a" stroke-width="1.4" stroke-dasharray="3 3" opacity=".6"/>
+
+            <text x="6" y="34" class="muted" font-size="9.5">Guavio</text>
+            <rect x="82" y="24" width="144" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="230" y="36" class="val" font-size="10" fill="#0c6b7a">96,2%</text>
+
+            <text x="6" y="57" class="muted" font-size="9.5">Esmeralda</text>
+            <rect x="82" y="47" width="144" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="230" y="59" class="val" font-size="10" fill="#0c6b7a">95,9%</text>
+
+            <text x="6" y="80" class="muted" font-size="9.5">Muña</text>
+            <rect x="82" y="70" width="136" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="222" y="82" class="val" font-size="10" fill="#0c6b7a">90,9%</text>
+
+            <text x="6" y="103" class="muted" font-size="9.5">Chuza</text>
+            <rect x="82" y="93" width="128" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="214" y="105" class="val" font-size="10" fill="#0c6b7a">85,6%</text>
+
+            <text x="6" y="126" class="muted" font-size="9.5">Peñol</text>
+            <rect x="82" y="116" width="128" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="214" y="128" class="val" font-size="10" fill="#0c6b7a">85,4%</text>
+
+            <text x="6" y="149" class="muted" font-size="9.5">El Quimbo</text>
+            <rect x="82" y="139" width="119" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="205" y="151" class="val" font-size="10" fill="#0c6b7a">79,2%</text>
+
+            <text x="6" y="172" class="muted" font-size="9.5">Ituango</text>
+            <rect x="82" y="162" width="105" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="191" y="174" class="val" font-size="10" fill="#0c6b7a">70,3%</text>
+
+            <text x="6" y="195" class="muted" font-size="9.5">Urrá</text>
+            <rect x="82" y="185" width="85" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="171" y="197" class="val" font-size="10" fill="#0c6b7a">56,7%</text>
+
+            <text x="6" y="218" class="muted" font-size="9.5">Prado</text>
+            <rect x="82" y="208" width="71" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="157" y="220" class="val" font-size="10" fill="#0c6b7a">47,5%</text>
+
+            <text x="6" y="241" class="muted" font-size="9.5">Porce III</text>
+            <rect x="82" y="231" width="68" height="16" rx="3" fill="#0c6b7a"/>
+            <text x="154" y="243" class="val" font-size="10" fill="#0c6b7a">45%</text>
+
+            <text x="6" y="264" class="muted" font-size="9.5">Punchiná</text>
+            <rect x="82" y="254" width="53" height="16" rx="3" fill="#a30f34"/>
+            <text x="139" y="266" class="val" font-size="10" fill="#a30f34">35%</text>
+
+            <text x="6" y="287" class="muted" font-size="9.5">Porce II</text>
+            <rect x="82" y="277" width="47" height="16" rx="3" fill="#a30f34"/>
+            <text x="133" y="289" class="val" font-size="10" fill="#a30f34">31,5%</text>
+
+            <text x="6" y="310" class="muted" font-size="9.5">Troneras</text>
+            <rect x="82" y="300" width="16" height="16" rx="3" fill="#a30f34"/>
+            <text x="102" y="312" class="val" font-size="10" fill="#a30f34">10,7%</text>
+
+            <text x="6" y="344" class="muted" font-size="10" font-weight="700">Promedio nacional: 78%</text>
+          </svg>
+          <p class="src">Corte al 24 de agosto de 2026. Fuente: IDEAM con datos de XM/Red.</p>
+        </div>
+
+        <p>Si hay menos lluvia, hay menos agua para generar energía. Cuando eso pasa, toca echar mano de las termoeléctricas, que queman gas natural o carbón pa' producir luz. El lío es que desde diciembre de 2024 el país está corto de gas, y por eso está importando el 21% del que usa.</p>
+        <p>Eso hace que las plantas tengan más riesgo de fallar durante El Niño, o que la luz que llega a las casas salga más cara. Y eso golpea directamente a la economía de país y de las familias, como pasó con el racionamiento de agua que hubo en Bogotá entre 2024 y 2025.</p>
+      </section>
+
+      <section class="block">
+        <details class="acc">
+          <summary><span class="sev" style="background:var(--panel-accent)"></span>Cómo funciona por dentro el sistema eléctrico<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p class="subhead">¿Qué plantas usamos y cuánto pesa cada una?</p>
+            <p>En Colombia la mezcla de plantas (lo que se llama la "matriz energética") es, a grandes rasgos: <strong>más del 60% hidroeléctricas</strong>, cerca de un <strong>30%-35% termoeléctricas</strong> (repartidas entre las que queman gas y las que queman carbón o líquidos), y el resto —todavía chiquito pero creciendo rápido— son las "alternativas": solar, eólica y biomasa. O sea, la hidroeléctrica sigue siendo, por lejos, la fuente que más usamos.</p>
+            <p class="subhead">¿Qué es la energía "en firme"?</p>
+            <p>Es la energía que un generador puede <strong>garantizar</strong> así estemos en el peor momento de una sequía. No basta con que una planta exista: tiene que poder entregar esa energía incluso cuando no hay agua o no hay sol. Por eso el país necesita ir sumando cada vez más energía en firme, y no solo más plantas.</p>
+            <p class="subhead">¿Qué pasa cuando deja de llover?</p>
+            <p>Los embalses empiezan a bajar. Como el agua que queda hay que administrarla pa' que alcance varios meses, cada generador hidroeléctrico le pone un "precio interno" más alto al agua que le queda (eso se llama el <strong>costo de oportunidad del agua</strong>): entre más escasa esté, más cara la valora, pa' no gastarla de afán y guardarla pa' cuando de verdad se necesite.</p>
+            <p class="subhead">¿Cuándo entran las térmicas?</p>
+            <p>Las termoeléctricas entran cuando generar con ellas sale más barato (o igual de urgente) que seguir vaciando el embalse. Eso pasa de dos formas: por <strong>mérito</strong>, cuando su precio de oferta es competitivo dentro de la "bolsa" y las llaman a generar; o de forma <strong>obligada</strong>, cuando la CREG activa una regla (como la que está rigiendo ahora) que exige un mínimo de generación térmica sin importar el precio, pa' cuidar el agua de los embalses.</p>
+            <p class="subhead">¿Qué es la bolsa de energía?</p>
+            <p>Es el mercado donde, hora a hora, todas las plantas del país ofertan a qué precio están dispuestas a generar. El operador (XM) va llamando a generar primero a las plantas más baratas y va subiendo hasta cubrir toda la demanda de esa hora. El precio que termina pagando <strong>todo el sistema</strong> es el de la última planta que tuvo que entrar (la más cara de las que sí generaron): eso se llama el <strong>precio de bolsa</strong>.</p>
+            <p class="subhead">¿Qué es el precio de escasez?</p>
+            <p>Es un precio de referencia que fija la regulación como una especie de "alarma": si el precio de bolsa se dispara por encima de ese nivel, se activa un mecanismo (el Cargo por Confiabilidad) que obliga a las plantas que se comprometieron a tener energía firme a generar sí o sí, así no les convenga por precio. A cambio, esas plantas reciben un pago aparte (el cargo por confiabilidad, que todos pagamos en la factura) por estar siempre disponibles. Es la forma que tiene el sistema de asegurar que, en el peor momento, no falte quien genere.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="block">
+        <h3 class="stitle">¿Quién consume más energía en el país?</h3>
+        <div class="chart-card">
+          <h4>Cantidad de energía que gasta cada región</h4>
+          <svg class="chart" viewBox="0 0 460 250" role="img" aria-label="Gráfico de barras horizontales. Caribe concentra el 21,7% de la demanda de energía del país, seguido de Meta con 14,5%, Antioquia 12,3%, Valle del Cauca 10,5%, Cundinamarca 9,9%, Bogotá 7,7%, y el resto del país 23,4%.">
+            <text x="0" y="20" class="muted" font-size="11">Caribe</text>
+            <rect x="140" y="8" width="260" height="20" rx="4" fill="#0c6b7a"/>
+            <text x="405" y="23" class="val num" font-size="12" fill="#0c6b7a">21,7%</text>
+
+            <text x="0" y="56" class="muted" font-size="11">Meta</text>
+            <rect x="140" y="44" width="174" height="20" rx="4" fill="#0089be"/>
+            <text x="319" y="59" class="val num" font-size="12" fill="#0089be">14,5%</text>
+
+            <text x="0" y="92" class="muted" font-size="11">Antioquia</text>
+            <rect x="140" y="80" width="147" height="20" rx="4" fill="#0089be"/>
+            <text x="292" y="95" class="val num" font-size="12" fill="#0089be">12,3%</text>
+
+            <text x="0" y="128" class="muted" font-size="11">Valle del Cauca</text>
+            <rect x="140" y="116" width="126" height="20" rx="4" fill="#0089be"/>
+            <text x="271" y="131" class="val num" font-size="12" fill="#0089be">10,5%</text>
+
+            <text x="0" y="164" class="muted" font-size="11">Cundinamarca</text>
+            <rect x="140" y="152" width="118" height="20" rx="4" fill="#3ba0cf"/>
+            <text x="263" y="167" class="val num" font-size="12" fill="#3ba0cf">9,9%</text>
+
+            <text x="0" y="200" class="muted" font-size="11">Bogotá D.C.</text>
+            <rect x="140" y="188" width="92" height="20" rx="4" fill="#3ba0cf"/>
+            <text x="237" y="203" class="val num" font-size="12" fill="#3ba0cf">7,7%</text>
+
+            <text x="0" y="236" class="muted" font-size="11">Resto del país</text>
+            <rect x="140" y="224" width="280" height="20" rx="4" fill="#917d71"/>
+            <text x="425" y="239" class="val num" font-size="12" fill="#3a3128">23,4%</text>
+          </svg>
+          <p class="src">Demanda real, MWh, enero-agosto de 2026. Fuente: elaboración ANIF con base en XM.</p>
+        </div>
+      </section>
+    </div></section>
+
+    <!-- ============ 03 EL PLAN ============ -->
+    <section class="panel" id="p-plan"><div class="panel-sheet">
+      <h2 class="htitle">¿Qué propone Abelardo?</h2>
+      <p class="lede">El <strong style="color:#ffd23f">Plan Energía YA</strong> arranca con la decisión del Gobierno de destinar <strong style="color:#ffd23f">$1,5 billones</strong> pa' proteger el servicio de energía de los colombianos de tres formas: <strong style="color:#ffd23f">disponibilidad de combustibles pa' que las termoeléctricas funcionen</strong>, <strong style="color:#ffd23f">sostenibilidad financiera del sector</strong> y <strong style="color:#ffd23f">coordinación con alcaldías y gobernaciones</strong>.</p>
+
+      <section class="block">
+
+        <details class="acc" id="acc-medida-1" open>
+          <summary><span class="sev" style="background:var(--panel-accent)"></span>1. Descuentos a quien ahorre, cobro extra a quien gaste de más<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>Si usted ahorra, su recibo de luz podría salirle más barato. La CREG —la entidad que regula energía y gas en el país— creó un programa pa' recompensar a quienes ahorren en los próximos seis meses: da saldo a favor en el recibo, pero si usted se da garra gastando luz, le cobran extra.</p>
+            <p>El programa arrancó el 1 de septiembre en todo el país. La plata de los que gasten de más va a una bolsa que se reparte proporcionalmente entre quienes ahorraron.</p>
+            <p>Su meta sale de dividir la energía que gastó el último año entre los días facturados, pa' sacar un consumo diario. Esa meta diaria se multiplica por los días que factura la empresa cada mes. Cada casa tiene una meta distinta, y se la deben comunicar por el recibo, la página web o los portales de pago.</p>
+
+            <div class="tbl-wrap">
+              <table class="grid">
+                <thead><tr><th>Grupo</th><th>Si usted...</th><th>Le pasa</th></tr></thead>
+                <tbody>
+                  <tr><td class="tag-cell"><strong>1</strong></td><td>Consume 10% menos que su meta</td><td>Puede recibir saldo a favor</td></tr>
+                  <tr><td class="tag-cell"><strong>2</strong></td><td>Baja poquito su consumo, o lo sube hasta 10%</td><td>Paga la tarifa normal, sin extras ni ahorro</td></tr>
+                  <tr><td class="tag-cell"><strong>3</strong></td><td>Sube el consumo más de 10% frente a su meta</td><td>Le cobran extra: 30% en estratos 1-3, 50% en 4-6, 70% a negocios</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size:.85rem;color:var(--text-muted)">No necesita inscribirse. La empresa le dirá en la factura cuánto ahorró o se excedió, cuánto le cobran y cómo va frente a otras personas parecidas a usted. Quedan por fuera hospitales, colegios, entidades de seguridad, usuarios con medidor prepago o servicio suspendido, y la gente de municipios afectados por el terremoto.</p>
+            <a class="media-card" href="https://www.instagram.com/p/DdAPjjrMZ0q/" target="_blank" rel="noopener">
+              <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+              <span><span class="mt" style="display:block">Vea cómo funciona el programa de ahorro</span><span class="ms">Instagram · Economía para la Pipol</span></span>
+            </a>
+          </div>
+        </details>
+
+        <details class="acc" id="acc-medida-2">
+          <summary><span class="sev" style="background:var(--panel-accent)"></span>2. $1,5 billones pa' las empresas con deudas<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p class="subhead">¿Por qué se necesita esa plata?</p>
+            <p>El sistema eléctrico es una cadena: generadoras le venden a transmisoras, estas a distribuidoras, y estas a comercializadoras que finalmente le cobran a usted. Si un eslabón no paga, el de al lado tampoco puede pagar, y así sucesivamente. Esa plata es pa' darle <strong>liquidez</strong> a las empresas que están en la cadena y tienen deudas, pa' que puedan seguir comprando combustible, haciendo mantenimiento y prestando el servicio mientras dura la crisis.</p>
+            <p class="subhead">¿Para qué va exactamente?</p>
+            <p>El plan tiene tres frentes: plata de contado pa' que las empresas con problemas de caja aguanten los próximos meses (liquidez de corto plazo), reglas pa' que el sector deje de acumular deudas hacia adelante (sostenibilidad financiera), y coordinación con alcaldías y gobernaciones pa' que los pagos de servicios públicos de las entidades territoriales lleguen a tiempo.</p>
+            <p class="subhead">¿Por qué se debe tanta plata?</p>
+            <p>Por varias razones que se fueron sumando: los subsidios de energía que el Gobierno le da a los estratos 1, 2 y 3 (hasta 60% de descuento en estrato 1, 50% en el 2 y 15% en el 3) se venían pagando tarde; cerca del 60% de los comercializadores están expuestos a los vaivenes del precio de bolsa sin estar bien cubiertos con contratos; y en la Costa, puntualmente, la crisis de Air-e se volvió una bola de nieve.</p>
+            <p class="subhead">¿Por qué lo de la Costa es un efecto dominó?</p>
+            <p>En 2017 el Gobierno intervino Electricaribe por deudas y mala calidad del servicio. En 2020 nacieron Air-e y Afinia pa' reemplazarla, pero en septiembre de 2024 el Gobierno también tuvo que intervenir Air-e: en ese momento debía más de $530 mil millones, y hoy la deuda ya supera los $3 billones, de los cuales <strong>$1,2 billones son justamente con termoeléctricas</strong>. Air-e atiende casi el 12% de la demanda de energía del país, así que si no le pagan a esas plantas, ellas se quedan sin plata pa' combustible y mantenimiento, y eso termina afectando la generación en todo el país, no solo en la Costa. Por eso, aunque usted no viva allá, es posible que le toque poner de su bolsillo pa' resolverlo.</p>
+          </div>
+        </details>
+
+        <details class="acc" id="acc-medida-3">
+          <summary><span class="sev" style="background:var(--panel-accent)"></span>3. Encender las termoeléctricas ya<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p class="subhead">¿Por qué se activó esto?</p>
+            <p>La cantidad de agua que le puede llegar a los embalses (los aportes hídricos) llevan cuatro meses seguidos por debajo del promedio histórico (en agosto de 2026 estuvieron en 74,46% de la referencia), mientras la demanda de energía tocó un máximo histórico en un día (263,27 GWh). Al 3 de septiembre, los embalses estaban en 83,22%, por debajo del umbral técnico de alerta. Con esas señales, la CREG sacó la Resolución 101-127 de 2026.</p>
+            <p class="subhead">¿Qué hace la resolución con el precio?</p>
+            <p>XM, la operadora del sistema eléctrico, ahora define día a día lo mínimo que deberían producir las termoeléctricas (técnicamente el <strong>nivel mínimo obligatorio de generación térmica</strong>) según qué tan llenos estén los embalses. Eso significa que una parte de la demanda se atiende con termoeléctricas <strong>sí o sí</strong>, sin esperar a que su precio sea el más barato en la bolsa. La idea es guardar agua pa' los meses más críticos del Niño.</p>
+            <p class="subhead">¿Por qué le pide a las térmicas entrar antes?</p>
+            <p>Antes de esta resolución regía un estatuto de 2014 (el Estatuto para la Resolución de Situaciones de Riesgo de Desabastecimiento) que obligaba a las hidroeléctricas a valorar el agua más cara cuando el embalse bajaba (el "costo de oportunidad del agua"), esperando que así entraran más rápido las térmicas por su propio mérito en la bolsa. El problema es que esa función terminó haciendo lo contrario: si una hidroeléctrica no valoraba bien su agua, la térmica seguía entrando tarde, y mientras tanto los precios de bolsa se mantenían artificialmente bajos, aunque el agua sí estuviera escasa. La resolución 101-127 destapa esa olla: ya no depende de que la hidro "adivine" el precio correcto del agua, sino que obliga directamente a un mínimo de térmica, pase lo que pase con el precio.</p>
+            <p class="subhead">¿Por qué eso arregla el problema ya?</p>
+            <p>Porque asegura, desde ya, que haya respaldo térmico disponible sin esperar a que el mercado reaccione solo. El primer día de aplicación, la medida ya bajó el precio de bolsa de la energía de casi $1.000 a $640, porque metió de una vez la generación que hacía falta. Es una forma de comprar tiempo: "aguantamos una semana más" mientras se cierran contratos de energía firme más permanentes.</p>
+            <div class="note crit">
+              <span class="ico">⚠️</span>
+              <p><strong>El problema de fondo:</strong> las térmicas van a tener que generar hasta 9 meses seguidos (la medida rige hasta abril de 2027) prácticamente <strong>al costo, sin margen de ganancia</strong> —adelantando mantenimientos y desgastando máquinas—, aunque parte de la plata que ya les deben tampoco les ha llegado. Y al forzar la entrada de la térmica y sostener el precio de bolsa más bajo de lo que reflejaría una sequía real, se le está quitando presión al precio del agua: es decir, se está <strong>bajando artificialmente</strong> la señal de escasez que debería estar mandando el mercado, lo que no incentiva tanto el ahorro como debería. No es sostenible más allá de unos meses: entre más gas importado y combustibles líquidos se necesiten, más va a subir el precio.</p>
+            </div>
+            <p style="font-size:.85rem;color:var(--text-muted)">Ojo: no es la primera vez. Según el sector, no se ha pasado un solo Niño desde 2014 sin que alguien tenga que meter la mano en el mercado.</p>
+          </div>
+        </details>
+
+        <details class="acc" id="acc-medida-4">
+          <summary><span class="sev" style="background:var(--panel-accent)"></span>4. Proyecto de ley urgente en el Congreso<span class="chev">▾</span></summary>
+          <div class="acc-body">
+            <p>El ministro de Hacienda anunció que presentará, junto al MinMinas, un proyecto con mensaje de urgencia pa' recaudar $1,2 billones que se usarían pa' seguir financiando las medidas de liquidez mientras pasa El Niño. La idea es reorientar partidas del presupuesto de 2026.</p>
+            <p>En el debate de control político en la Comisión Quinta del Senado, el ministro pidió el apoyo de los congresistas, insistiendo en que su gobierno "lleva un mes" y no es responsable del origen del problema, aunque sí de resolverlo. También habló de trabas de vieja data, como una línea de transmisión de 1.000 kilómetros entre la Costa y el interior que acumula 1.000 consultas previas pendientes.</p>
+          </div>
+        </details>
+
+      </section>
+    </div></section>
+
+    <!-- ============ 04 CÓMO ME AFECTA ============ -->
+    <section class="panel" id="p-afecta"><div class="panel-sheet">
+      <h2 class="htitle">¿Eso cómo me afecta?</h2>
+      <p class="lede">El bolsillo lo siente por varios lados: lo que paga por la luz, lo que paga por la comida, y hasta lo que se demora en bajar la tasa de interés.</p>
+
+      <section class="block card">
+        <h3 class="stitle">En el recibo de la luz</h3>
+        <p>Las tarifas ya venían subiendo antes de que arrancara el Plan Energía YA. Incluso cuando los embalses estaban llenos y estaba lloviendo, varias generadoras ya habían subido precios. Ahora, mientras el país dependa más de la generación térmica (más cara que la hidráulica), esa presión sobre la tarifa se mantiene, y entre más gas importado se necesite, más va a subir. La propia ministra de Minas y Energía lo ha dicho sin rodeos: las tarifas <span class="hl">van a seguir subiendo</span>, y más todavía cuando El Niño llegue a su punto más fuerte, algo que se espera para el segundo semestre de 2026 y todo 2027.</p>
+        <p>Buena parte de esa subida tiene un nombre técnico: <strong>restricciones</strong>. La resolución de la CREG obliga a XM, el operador del sistema, a meter un mínimo de generación térmica todos los días para cuidar el agua de los embalses, así esa térmica no sea la más barata disponible en ese momento. La diferencia entre lo que habría costado tener esa energía normalmente versus en estas condiciones sale más cara para usted: de <span class="hl">$80 a $100 por cada kWh</span>. Es la misma plata que menciona la ANDI cuando habla del golpe a la industria, solo que aquí también le llega a usted, en su propio recibo.</p>
+
+        <div class="chart-card small" style="margin:14px auto">
+          <h4>Tarifa promedio nacional ($/kWh)</h4>
+          <svg class="chart" viewBox="0 0 300 190" role="img" aria-label="Gráfico de barras: la tarifa promedio nacional bajó de 898,5 pesos por kWh en julio de 2025 a 866 en febrero de 2026, y desde ahí subió de forma seguida hasta 934,1 en junio de 2026, un 10,2% más que en mayo, cuando el sistema entró en vigilancia.">
+            <line class="axisline" x1="10" y1="150" x2="290" y2="150"/>
+            <rect x="14" y="42" width="34" height="108" rx="4" fill="#f2b78f"/>
+            <text x="31" y="36" text-anchor="middle" class="val" font-size="9.5" fill="#a85200">898,5</text>
+            <text x="31" y="166" text-anchor="middle" class="muted" font-size="8">jul-25</text>
+
+            <rect x="58" y="55" width="34" height="95" rx="4" fill="#f2b78f"/>
+            <text x="75" y="49" text-anchor="middle" class="val" font-size="9.5" fill="#a85200">866,0</text>
+            <text x="75" y="166" text-anchor="middle" class="muted" font-size="8">feb-26</text>
+
+            <rect x="102" y="49" width="34" height="101" rx="4" fill="#f2b78f"/>
+            <text x="119" y="43" text-anchor="middle" class="val" font-size="9.5" fill="#a85200">877,8</text>
+            <text x="119" y="166" text-anchor="middle" class="muted" font-size="8">mar-26</text>
+
+            <rect x="146" y="45" width="34" height="105" rx="4" fill="#f2b78f"/>
+            <text x="163" y="39" text-anchor="middle" class="val" font-size="9.5" fill="#a85200">888,4</text>
+            <text x="163" y="166" text-anchor="middle" class="muted" font-size="8">abr-26</text>
+
+            <rect x="190" y="41" width="34" height="109" rx="4" fill="#f2b78f"/>
+            <text x="207" y="35" text-anchor="middle" class="val" font-size="9.5" fill="#a85200">899,0</text>
+            <text x="207" y="166" text-anchor="middle" class="muted" font-size="8">may-26</text>
+
+            <rect x="240" y="16" width="40" height="134" rx="4" fill="#a85200"/>
+            <text x="260" y="10" text-anchor="middle" class="val" font-size="10.5" fill="#a85200">934,1</text>
+            <text x="260" y="166" text-anchor="middle" class="muted" font-size="8">jun-26</text>
+          </svg>
+          <p class="src">El sistema entró en "vigilancia" el 18 de mayo de 2026. Solo el componente de generación subió 10,2% entre marzo y junio. Fuente: costo unitario promedio nacional, 28 OR, nivel de tensión 1.</p>
+        </div>
+
+        <p>Si usted gasta de más frente a su meta de ahorro, el sobrecosto pega distinto según su estrato: <span class="hl">30% extra</span> en 1, 2 y 3; <span class="hl">50%</span> en 4, 5 y 6; y <span class="hl">70%</span> pa' negocios y empresas. Si ahorra, en cambio, puede recibir saldo a favor.</p>
+        <div class="note warn">
+          <span class="ico">🌡️</span>
+          <p><strong>Un problema de equidad:</strong> en regiones como el Caribe, donde hace más calor, es más difícil bajar el consumo un 10% sin cambiar casi nada en los hábitos. El riesgo es que esos hogares terminen pagando más solo por vivir donde hace más calor.</p>
+        </div>
+      </section>
+
+      <section class="block card">
+        <h3 class="stitle">En la actividad económica</h3>
+        <p>El impacto no es parejo entre sectores. El agro y la energía son los más golpeados: en trimestres con Fenómeno de El Niño, el crecimiento del agro pasa de un promedio de <span class="hl">2,87% a 2,31%</span> y el de energía de <span class="hl">3,07% a 2,60%</span>. Ese golpe puede sentirse todavía más fuerte con el tiempo, porque el agro cada vez pesa más en el PIB del país.</p>
+        <p>La industria también lo siente: según la ANDI, el sobrecosto de las restricciones (esa plata extra que se paga por meter térmica a la fuerza) le está pegando a la industria con cerca de <span class="hl">$80 a $100 extra</span> por cada kilovatio-hora.</p>
+      </section>
+
+      <section class="block">
+        <h3 class="stitle">En la canasta familiar</h3>
+        <div class="stat-grid">
+          <div class="stat"><div class="v warn">19%</div><div class="l">de la canasta familiar (alimentos y energía) queda expuesta al choque de El Niño</div></div>
+          <div class="stat"><div class="v crit">7,3%</div><div class="l">inflación proyectada en el escenario de Niño fuerte, frente a 6,6% en agosto de 2026</div></div>
+          <div class="stat"><div class="v">9,9%</div><div class="l">más subieron los alimentos que el nivel general de precios en el Niño más reciente</div></div>
+        </div>
+        <p>Los alimentos perecederos —papa, plátano, frutas frescas, leche— son los más golpeados por la sequía, y eso presiona la inflación.</p>
+        <div class="note">
+          <span class="ico">🏦</span>
+          <p>Como es un choque de oferta persistente, según ANIF también podría <strong>retrasar la reducción de las tasas de interés</strong> del Banco de la República: entre más dure la presión sobre los precios, menos margen tiene el Emisor pa' seguir bajando la tasa, y eso encarece créditos de vivienda, carro y tarjeta pa' todo el mundo, no solo pa' quien consume mucha energía.</p>
+        </div>
+      </section>
+
+      <section class="block card">
+        <h3 class="stitle">Si el país tuviera que racionar</h3>
+        <div class="stat-grid">
+          <div class="stat"><div class="v crit">$175-204 mil M</div><div class="l">costaría cada hora de apagón, según Fedesarrollo</div></div>
+          <div class="stat"><div class="v crit">260.000</div><div class="l">empleos que se perderían al año si tocara racionar luz y gas al tiempo</div></div>
+        </div>
+        <p style="font-size:.85rem;color:var(--text-muted)">Ese sería el costo de no haberse anticipado: algo que no pasa en Colombia desde 1994, y que equivaldría a <span class="hl">1,5% menos de crecimiento del PIB</span>. Fuente: Fedesarrollo, vía ANIF.</p>
+      </section>
+    </div></section>
+
+    <!-- ============ 05 CRISIS ACUMULADA ============ -->
+    <section class="panel" id="p-crisis"><div class="panel-sheet">
+      <h2 class="htitle">La crisis de energía que se venía acumulando</h2>
+      <p class="lede">El Niño llegó a un sistema que ya venía golpeado. Ábrale a cada crisis pa' entenderla sin que le llueva toda la información de una.</p>
+
+      <details class="acc" open>
+        <summary><span class="sev" style="background:var(--panel-accent)"></span>1. Nos falta energía en firme<span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p class="lede" style="margin-bottom:10px">Colombia lleva 32 años sin apagones, pero el margen de seguridad se está reduciendo.</p>
+          <p>Con el crecimiento del país, la IA y el transporte eléctrico, se necesita cada vez más energía. Pero no cualquiera: tiene que ser en firme, es decir, disponible incluso en sequía. Según XM, en 2025 faltó el 1,6% de esa energía requerida; la proyección pa' 2027 es que el déficit llegue a 6,4%.</p>
+          <div class="chart-card small" style="margin:14px auto">
+            <h4>Déficit de energía firme</h4>
+            <svg class="chart" viewBox="0 0 220 190" role="img" aria-label="Gráfico de barras: el déficit de energía firme pasa de 1,6% en 2025 a un estimado de 6,4% en 2027.">
+              <line class="axisline" x1="10" y1="160" x2="210" y2="160"/>
+              <rect x="26" y="124" width="72" height="36" rx="6" fill="#7fc4e0"/>
+              <text x="62" y="116" text-anchor="middle" class="val" font-size="13" fill="#04516f">1,6%</text>
+              <text x="62" y="176" text-anchor="middle" class="muted" font-size="10">2025</text>
+
+              <rect x="124" y="20" width="72" height="140" rx="6" fill="#04516f"/>
+              <text x="160" y="12" text-anchor="middle" class="val" font-size="13" fill="#04516f">6,4%</text>
+              <text x="160" y="176" text-anchor="middle" class="muted" font-size="10">2027 (proy.)</text>
+            </svg>
+            <p class="src">Casi 4 veces más. En sequía equivale a apagar todo el Valle del Cauca sin su capital, o Cali y Yumbo juntas. Fuente: XM.</p>
+          </div>
+
+          <p>Pa' que lo dimensione, la diferencia entre lo que puede garantizar el sistema y lo que el país consume es negativo hace años. Es decir, consumimos más de lo que tenemos. La proyección de la Comisión Quinta del Senado (con datos del propio Ministerio de Minas) dice que va a seguir siéndolo hasta el 2029:</p>
+          <div class="chart-card small" style="margin:14px auto">
+            <h4>Balance de energía firme (GWh/año)</h4>
+            <svg class="chart" viewBox="0 0 300 190" role="img" aria-label="Gráfico de barras: déficit de energía firme de -1.871 GWh/año en 2025-26, -1.776 en 2026-27, -2.082 en 2027-28 y -2.167 en 2028-29 (el peor punto), con un salto a +10.766 en 2029-30 si la subasta de confiabilidad entra a operar.">
+              <line class="axisline" x1="10" y1="92" x2="290" y2="92"/>
+              <rect x="20" y="92" width="42" height="34" rx="5" fill="#e3536f"/>
+              <text x="41" y="140" text-anchor="middle" class="val" font-size="11" fill="#a30f34">-1.871</text>
+              <text x="41" y="156" text-anchor="middle" class="muted" font-size="9">25-26</text>
+
+              <rect x="74" y="92" width="42" height="32" rx="5" fill="#e3536f"/>
+              <text x="95" y="138" text-anchor="middle" class="val" font-size="11" fill="#a30f34">-1.776</text>
+              <text x="95" y="156" text-anchor="middle" class="muted" font-size="9">26-27</text>
+
+              <rect x="128" y="92" width="42" height="37" rx="5" fill="#e3536f"/>
+              <text x="149" y="143" text-anchor="middle" class="val" font-size="11" fill="#a30f34">-2.082</text>
+              <text x="149" y="156" text-anchor="middle" class="muted" font-size="9">27-28</text>
+
+              <rect x="182" y="92" width="42" height="39" rx="5" fill="#a30f34"/>
+              <text x="203" y="145" text-anchor="middle" class="val" font-size="11" fill="#a30f34">-2.167</text>
+              <text x="203" y="156" text-anchor="middle" class="muted" font-size="9">28-29</text>
+
+              <rect x="236" y="15" width="46" height="77" rx="5" fill="#215c3b"/>
+              <text x="259" y="10" text-anchor="middle" class="val" font-size="11" fill="#215c3b">+10.766</text>
+              <text x="259" y="156" text-anchor="middle" class="muted" font-size="9">29-30*</text>
+            </svg>
+            <p class="src">*Ese salto verde solo se da si la subasta de confiabilidad de 2029-30 entra efectivamente en operación. Fuente: MME, respuesta a la Proposición 11 de 2026, con base en boletines XM/CND.</p>
+          </div>
+
+          <p>¿Por qué pasa? Porque varios proyectos de generación (solares, eólicos, térmicos, hidráulicos) no arrancan a tiempo, por permisos ambientales y relacionamiento con comunidades. Pero también por la red: las líneas de transmisión —las "autopistas" de la energía— se están quedando cortas. A diciembre de 2025, el 55% de esos proyectos estaba retrasado, con demoras de hasta 13 años (en Bogotá, las líneas Sogamoso-Norte y Norte-Nueva Esperanza llevan hasta 10 años de atraso).</p>
+
+          <div class="chart-card small" style="margin:14px auto">
+            <h4>Capacidad esperada vs. ingresada (MW)</h4>
+            <svg class="chart" viewBox="0 0 300 200" role="img" aria-label="Gráfico de barras: capacidad esperada frente a la ingresada, en megavatios, para 2023, 2024, 2025 y 2026. En 2023 se esperaban 6.608 MW y entraron 1.155. En 2024, 5.720 esperados y 1.447 entraron. En 2025, 3.517 esperados y 380 entraron. En 2026, 4.475 esperados y hasta ahora han entrado 1.004,7.">
+              <line class="axisline" x1="10" y1="150" x2="290" y2="150"/>
+
+              <rect x="18" y="34" width="26" height="116" rx="4" fill="#ff9022"/>
+              <text x="31" y="28" text-anchor="middle" class="val" font-size="10" fill="#a85200">6.608</text>
+              <rect x="46" y="130" width="26" height="20" rx="4" fill="#a30f34"/>
+              <text x="59" y="166" text-anchor="middle" class="muted" font-size="9">2023</text>
+
+              <rect x="90" y="55" width="26" height="95" rx="4" fill="#ff9022"/>
+              <text x="103" y="49" text-anchor="middle" class="val" font-size="10" fill="#a85200">5.720</text>
+              <rect x="118" y="126" width="26" height="24" rx="4" fill="#a30f34"/>
+              <text x="131" y="166" text-anchor="middle" class="muted" font-size="9">2024</text>
+
+              <rect x="162" y="90" width="26" height="60" rx="4" fill="#ff9022"/>
+              <text x="175" y="84" text-anchor="middle" class="val" font-size="10" fill="#a85200">3.517</text>
+              <rect x="190" y="144" width="26" height="6" rx="4" fill="#a30f34"/>
+              <text x="203" y="166" text-anchor="middle" class="muted" font-size="9">2025</text>
+
+              <rect x="234" y="73" width="26" height="77" rx="4" fill="#ff9022"/>
+              <text x="247" y="67" text-anchor="middle" class="val" font-size="10" fill="#a85200">4.475</text>
+              <rect x="262" y="133" width="26" height="17" rx="4" fill="#a30f34"/>
+              <text x="275" y="166" text-anchor="middle" class="muted" font-size="9">2026*</text>
+            </svg>
+            <p class="src">Barra naranja: MW que se esperaban. Barra roja: los que de verdad entraron a operar. *2026 va corrido: solo el 22,5% de lo esperado había entrado a septiembre. Fuente: Boletín XM 358 del 04/09/2026.</p>
+          </div>
+
+          <p style="font-size:.85rem;color:var(--text-muted)">Según expertos, destrabar esto necesita cerca del 1,5% del PIB al año durante una década, entre inversión pública y privada, con reglas claras como las subastas por confiabilidad.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="sev" style="background:var(--panel-accent)"></span>2. Nos falta gas natural propio<span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Cuando las hidroeléctricas no dan abasto por sequía, el país recurre a las termoeléctricas, y buena parte de ellas queman gas natural: según cifras citadas en el debate del Congreso, cerca del 43% de las plantas térmicas del país funcionan con gas y otro 40% con carbón. El problema es que, para el gas, Colombia lleva desde diciembre de 2024 sin producir lo suficiente: los campos viejos ya no rinden lo mismo y la exploración de campos nuevos se frenó. Eso obliga a importar cerca del 21% del gas que el país consume en 2026, lo que sale más caro y añade el riesgo de que algo falle en la cadena de suministro (barcos que se demoran, precios internacionales que suben).</p>
+          <p>Hay una luz al final del túnel, pero lejana: Ecopetrol confirmó el hallazgo de un pozo de gas en la Costa Caribe, Sirius-2, que según su presidente encargado, Juan Carlos Hurtado, solo estaría produciendo hasta 2030. Mientras tanto, la apuesta de corto plazo del Gobierno es traer más gas desde afuera.</p>
+          <p class="subhead">La puerta de entrada: las plantas de regasificación</p>
+          <p>Ese gas extra no llega directo por tubería, sino en barcos, como gas natural licuado (GNL). Para poder usarlo, primero hay que devolverlo a su estado gaseoso e inyectarlo a la red de gasoductos del país: eso lo hacen las plantas de regasificación, y hoy Colombia solo tiene una, la SPEC, en Cartagena. Como el país ahora necesita traer más gas que antes, esa única planta se quedó corta, y ampliar esa capacidad se volvió una prioridad: el exministro de Minas y Energía, Edwin Palma, lo planteó así en el Congreso de Naturgas (el gremio del sector), diciendo que había que prepararse con todas las medidas posibles para asegurar el gas que necesitan las térmicas.</p>
+          <p class="subhead">Lo que viene</p>
+          <p>Según la presidenta de Naturgas, Luz Stella Murgas, hay al menos 7 proyectos de nuevas plantas regasificadoras avanzando en el país, y dos de ellos podrían entrar a operar este mismo año: la Regasificadora del Pacífico, en Buenaventura —un proyecto de Ecopetrol en el que un barco recibe el gas, camiones lo llevan hasta una planta en Buga y de ahí se inyecta a la red nacional— y Puerto Bahía, en Cartagena, liderado por Ecopetrol y Frontera Energy, que sigue a la espera de permisos de la ANLA y la ANI.</p>
+          <p style="font-size:.85rem;color:var(--text-muted)">Entre los dos proyectos, la capacidad de regasificación del país pasaría de 400 a cerca de 586 millones de pies cúbicos diarios: más margen para sostener la generación con gas mientras la lluvia no vuelve.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="sev" style="background:var(--panel-accent)"></span>3. Las deudas del sector, sobre todo en la Costa<span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>En 2017 el Gobierno intervino Electricaribe por deudas y mala calidad del servicio. En 2020 nacieron dos empresas pa' reemplazarla: Air-e y Afinia. Pero las cosas no mejoraron: en septiembre de 2024 el Gobierno también intervino Air-e.</p>
+          <div class="stat-grid" style="margin:14px 0">
+            <div class="stat"><div class="v crit">$530 mil M</div><div class="l">deuda de Air-e al momento de la intervención (2024)</div></div>
+            <div class="stat"><div class="v crit">$2,5 billones</div><div class="l">deuda a diciembre de 2025, según la SuperServicios</div></div>
+            <div class="stat"><div class="v crit">+$3 billones</div><div class="l">deuda de Air-e hoy, de los cuales $1,2 billones son con termoeléctricas</div></div>
+          </div>
+          <p>El sistema eléctrico funciona como un dominó: si a las termoeléctricas no les pagan, se quedan sin plata pa' combustibles y mantenimientos, y eso afecta la generación en todo el país. Air-e atiende casi el 12% de la demanda de energía nacional, así que su crisis no es solo un problema de la Costa.</p>
+
+          <p>Y el problema es más grande que Air-e: la deuda de todo el sector eléctrico (sin contar gas) llegó a <span class="hl">$7,9 billones</span> a julio de 2026.</p>
+          <div class="chart-card small" style="margin:14px auto">
+            <h4>¿Con quién es la deuda del sector? ($7,9 billones)</h4>
+            <svg class="chart" viewBox="0 0 300 175" role="img" aria-label="Gráfico de barras: de la deuda del mercado mayorista, el 57,6% es con los generadores y el 42,4% es el resto del mercado.">
+              <line class="axisline" x1="10" y1="130" x2="290" y2="130"/>
+
+              <rect x="55" y="16" width="80" height="114" rx="6" fill="#a30f34"/>
+              <text x="95" y="9" text-anchor="middle" class="val" font-size="13" fill="#a30f34">57,6%</text>
+              <text x="95" y="146" text-anchor="middle" class="muted" font-size="10">
+                <tspan x="95">con</tspan>
+                <tspan x="95" dy="11">generadores</tspan>
+              </text>
+
+              <rect x="165" y="46" width="80" height="84" rx="6" fill="#e3a0b0"/>
+              <text x="205" y="39" text-anchor="middle" class="val" font-size="13" fill="#a30f34">42,4%</text>
+              <text x="205" y="146" text-anchor="middle" class="muted" font-size="10">
+                <tspan x="205">resto del</tspan>
+                <tspan x="205" dy="11">mercado</tspan>
+              </text>
+            </svg>
+            <div class="note" style="margin-top:6px">
+              <span class="ico">🔥</span>
+              <p>De la deuda con generadores, el <strong>79%</strong> es acreencias con plantas térmicas.</p>
+            </div>
+            <p class="src">La deuda crece a un ritmo de $400-450 mil millones al mes. Fuente: gremios del sector y MinHacienda (julio de 2026).</p>
+          </div>
+
+          <p>El problema tampoco es solo de Air-e: en 2025 e inicios de 2026 también hubo atrasos en el pago de subsidios del Gobierno a las comercializadoras, lo que golpea el flujo de caja de todo el sector. Según Andesco (el gremio de servicios públicos), que las empresas tengan buen flujo financiero es clave pa' que no haya riesgo de apagones.</p>
+          <p style="font-size:.85rem;color:var(--text-muted)">Vea el detalle completo de los salvavidas que se han propuesto pa' pagar esta deuda —incluido si a usted, sin vivir en la Costa, le toca poner— en la medida 2 de la pestaña "El plan de Abelardo".</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="sev" style="background:var(--panel-accent)"></span>4. Reglas claras pa' que los privados inviertan<span class="chev">▾</span></summary>
+        <div class="acc-body">
+          <p>Las inversiones del sector son gigantes y se recuperan a muy largo plazo (hasta 40 años). Quienes ponen la plata —y los bancos que les prestan— necesitan estabilidad regulatoria: que la CREG sea técnica e independiente, y que no le cambien las reglas del juego cada rato.</p>
+          <p>En junio de 2026 la CREG sacó la resolución 101-113, que regula las baterías: como respaldo de la red, como negocio independiente (comprar energía barata y venderla cara cuando escasee), o conectadas a proyectos de generación. Ya hay reglas, pero falta que el sector público genere incentivos pa' que los privados metan plata.</p>
+          <a class="media-card" href="https://www.instagram.com/p/DaeA2byDJnf/" target="_blank" rel="noopener">
+            <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+            <span><span class="mt" style="display:block">Entienda la nueva regulación de baterías</span><span class="ms">Instagram · Economía para la Pipol</span></span>
+          </a>
+        </div>
+      </details>
+    </div></section>
+
+    <!-- ============ 06 CONCLUSIONES ============ -->
+    <section class="panel" id="p-cierre"><div class="panel-sheet">
+      <h2 class="htitle">Entonces, ¿esto se arregló?</h2>
+      <p class="lede">Ni de riesgos. Lo que hay hoy es un plan de choque pa' pasar el Niño sin apagón, no una solución de fondo.</p>
+
+      <section class="block card">
+        <ul style="margin:0 0 14px;padding-left:20px;">
+          <li style="margin-bottom:12px"><strong>Casi todo es de corto plazo.</strong> La regla que obliga a las termoeléctricas a generar sin ganancia dura 9 meses, no pa' siempre; el gas que necesitan esas plantas es cada vez más caro; y mientras más gas importado se use, más va a subir el precio de la energía en bolsa.</li>
+          <li style="margin-bottom:12px"><strong>Esto se repite en cada Niño.</strong> Según el sector, no ha pasado un solo Niño desde 2014 sin que alguien tenga que meter la mano en el mercado. Eso funciona pa' aguantar la coyuntura, pero no resuelve por qué el país sigue llegando a cada Niño con el margen de seguridad más ajustado.</li>
+          <li style="margin-bottom:12px"><strong>Las tres deudas de fondo siguen ahí:</strong> falta energía en firme (y las líneas de transmisión pa' moverla), falta gas natural propio, y las empresas del sector, sobre todo en la Costa, siguen quebradas o a punto de quebrar. Mientras esas tres cosas no se resuelvan, cada Niño va a volver a poner al país contra la pared.</li>
+          <li style="margin-bottom:12px"><strong>Alguien lo termina pagando.</strong> Ya sea en el recibo de la luz o en los impuestos: nada de esto es gratis, así el Gobierno diga que por ahora las tarifas no van a subir por el impuesto temporal a las generadoras.</li>
+          <li><strong>Lo que sí cambiaría el panorama a largo plazo:</strong> invertir cerca del 1,5% del PIB al año durante una década en generación y transmisión, dar reglas regulatorias estables pa' que la plata privada entre con confianza, y ampliar la capacidad de gas del país con las nuevas plantas regasificadoras. Nada de eso se resuelve en 9 meses.</li>
+        </ul>
+      </section>
+    </div></section>
+
+  </div>
+
+  <section class="sources">
+    <h3 class="stitle">Fuentes</h3>
+    <ol>
+      <li><a href="https://www.minenergia.gov.co/es/sala-de-prensa/noticias-index/gobierno-nacional-destina-1-5-billones-para-proteger-a-los-colombianos-de-posibles-afectaciones-en-el-servicio-de-energia/" target="_blank" rel="noopener">Ministerio de Minas y Energía — anuncio de los $1,5 billones (24 de agosto de 2026)</a></li>
+      <li><a href="https://gestornormativo.creg.gov.co/gestor/entorno/docs/originales/Resoluci%C3%B3n_CREG_101_127_2026/" target="_blank" rel="noopener">CREG — Resolución 101-127 de 2026 (generación térmica mínima)</a></li>
+      <li><a href="https://www.xm.com.co/b7950446-9756-4aae-9e06-a7de7625efa9" target="_blank" rel="noopener">XM — datos de déficit de energía en firme y transmisión</a></li>
+      <li><a href="https://www.superservicios.gov.co/system/files/2025-01/Resolucion-20251000004725.pdf" target="_blank" rel="noopener">SuperServicios — resolución de intervención de Air-e</a></li>
+      <li><a href="https://www.celsia.com/es/blog-celsia/lo-que-debes-saber-de-los-subsidios-de-energia/" target="_blank" rel="noopener">Celsia — cómo funcionan los subsidios de energía</a></li>
+      <li>ANIF — "Impactos macroeconómicos del fenómeno de El Niño", Taller para periodistas, 9 de septiembre de 2026</li>
+      <li><a href="https://anif.com.co/comentario-economico/plan-energia-ya-respuestas-al-fenomeno-de-el-nino/" target="_blank" rel="noopener">ANIF — Comentario económico: Plan Energía YA, respuestas al Fenómeno de El Niño</a></li>
+      <li><a href="https://congresovisible.uniandes.edu.co/citaciones/debate-de-control-politico-sobre-la-crisis-del-sector-energetico-en-colombia-las-medidas-frente-a-un-fuerte-fenomeno-del-nino-las-deudas-del-sector-el---riesgo-de-crisis-sistematica-y-el-impacto-en-las-tarifas-de-energia/104106/" target="_blank" rel="noopener">Congreso Visible — debate de control político sobre la crisis energética</a></li>
+      <li><a href="https://x.com/SenadoGovCo/status/2097712302497600001?s=20" target="_blank" rel="noopener">Senado de la República — debate completo (video)</a></li>
+      <li><a href="https://x.com/MinHacienda/status/2091923936657256487" target="_blank" rel="noopener">Ministerio de Hacienda — hilo sobre la crisis financiera del sector</a></li>
+      <li><a href="https://x.com/ABDELAESPRIELLA/status/2096709450216165804?s=20" target="_blank" rel="noopener">Presidente De La Espriella — anuncio de las medidas</a></li>
+      <li><a href="https://www.youtube.com/watch?v=hzyuwH3w2GE&list=PLauMF8VwODmJrG-r-Wnc7R16hh5rljr0_&index=14" target="_blank" rel="noopener">Podcast de la Pipol — ¿qué es El Niño y cómo joda la economía?</a></li>
+      <li><a href="https://www.instagram.com/p/DdAPjjrMZ0q/" target="_blank" rel="noopener">Instagram — cómo funciona el programa de ahorro de energía</a></li>
+      <li><a href="https://www.instagram.com/p/DaeA2byDJnf/" target="_blank" rel="noopener">Instagram — la nueva regulación de baterías</a></li>
+    </ol>
+  </section>
+
+  <footer class="colophon">
+    <span>Economía para la Pipol · economiaparalapipol.com</span>
+  </footer>
+</div>
+
+<script>
+  (function(){
+    // Los tabs son radios+labels puros en CSS (funcionan sin JS, en cualquier navegador).
+    // El JS de aquí solo mejora el salto "medida -> acordeón" y sincroniza el hash de la URL.
+    var panelToRadio = {
+      'p-contexto':'r-contexto','p-nino':'r-nino','p-energia':'r-energia',
+      'p-plan':'r-plan','p-afecta':'r-afecta','p-crisis':'r-crisis','p-cierre':'r-cierre'
+    };
+
+    Array.prototype.slice.call(document.querySelectorAll('.tab-radio')).forEach(function(r){
+      r.addEventListener('change', function(){
+        if (r.checked && history.replaceState) {
+          var panelId = Object.keys(panelToRadio).filter(function(k){ return panelToRadio[k] === r.id; })[0];
+          if (panelId) history.replaceState(null, '', '#' + panelId);
+        }
+      });
+    });
+
+    // Acordeones exclusivos: al abrir uno, los demás del mismo grupo (mismo padre directo) se cierran solos.
+    Array.prototype.slice.call(document.querySelectorAll('details.acc, details.stat')).forEach(function(det){
+      det.addEventListener('toggle', function(){
+        if (!det.open || !det.parentElement) return;
+        var cls = det.classList.contains('acc') ? 'acc' : 'stat';
+        Array.prototype.slice.call(det.parentElement.children).forEach(function(el){
+          if (el !== det && el.tagName === 'DETAILS' && el.classList.contains(cls)) el.open = false;
+        });
+      });
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll('.medida-link')).forEach(function(link){
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        var radio = document.getElementById('r-plan');
+        if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change')); }
+        var targetId = link.getAttribute('data-target');
+        var det = targetId ? document.getElementById(targetId) : null;
+        if (det && det.tagName === 'DETAILS') det.open = true;
+        window.scrollTo({top:0, behavior:'smooth'});
+        setTimeout(function(){
+          if (det) det.scrollIntoView({block:'start', behavior:'smooth'});
+        }, 280);
+      });
+    });
+
+    var initial = (location.hash || '').replace('#','');
+    var initialRadio = initial ? document.getElementById(panelToRadio[initial]) : null;
+    if (initialRadio) initialRadio.checked = true;
+  })();
+</script>
+
+</body>
+</html>
